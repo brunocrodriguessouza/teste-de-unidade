@@ -21,9 +21,9 @@ public class AvaliadorTest {
 		
 		Leilao leilao = new Leilao("Playstation 3 novo");
 		
-		leilao.propoe(new Lance(joao, 250.0));
-		leilao.propoe(new Lance(maria, 300.0));
-		leilao.propoe(new Lance(jose, 400.0));
+		leilao.propor(new Lance(joao, 250.0));
+		leilao.propor(new Lance(maria, 300.0));
+		leilao.propor(new Lance(jose, 400.0));
 		
 		// Parte 2: Acao
 		Avaliador leiloeiro = new Avaliador();
@@ -43,7 +43,7 @@ public class AvaliadorTest {
 		Usuario joao = new Usuario("Joao");
 		Leilao leilao = new Leilao("Playstation 3 novo");
 		
-		leilao.propoe(new Lance(joao, 1000.0));
+		leilao.propor(new Lance(joao, 1000.0));
 		
 		Avaliador leiloeiro = new Avaliador();
 		leiloeiro.avaliar(leilao);
@@ -59,10 +59,10 @@ public class AvaliadorTest {
 		Usuario maria = new Usuario("Maria");
 		Leilao leilao = new Leilao("Playstation 3 Novo");
 		
-		leilao.propoe(new Lance(joao, 100.0));
-		leilao.propoe(new Lance(maria, 200.0));
-		leilao.propoe(new Lance(joao, 300.0));
-		leilao.propoe(new Lance(maria, 400.0));
+		leilao.propor(new Lance(joao, 100.0));
+		leilao.propor(new Lance(maria, 200.0));
+		leilao.propor(new Lance(joao, 300.0));
+		leilao.propor(new Lance(maria, 400.0));
 		
 		Avaliador leiloeiro = new Avaliador();
 		leiloeiro.avaliar(leilao);
