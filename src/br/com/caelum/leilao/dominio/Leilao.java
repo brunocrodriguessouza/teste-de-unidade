@@ -44,4 +44,20 @@ public class Leilao {
 	public List<Lance> getLances() {
 		return Collections.unmodifiableList(lances);
 	}
+
+	public void dobrarLance(Usuario usuario) {
+		Lance ultimoLance = recuperarUltimoLanceDo(usuario);
+		if(ultimoLance!=null){
+			propor(new Lance(usuario, ultimoLance.getValor() * 2));	
+		}
+	}
+
+	private Lance recuperarUltimoLanceDo(Usuario usuario) {
+		Lance ultimo = null;
+		for (Lance lance : lances) {
+			if (lance.getUsuario().equals(usuario))
+				ultimo = lance;
+		}
+		return ultimo;
+	}
 }
