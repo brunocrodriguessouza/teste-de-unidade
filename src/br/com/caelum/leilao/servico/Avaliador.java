@@ -29,7 +29,7 @@ public class Avaliador {
 
 			public int compare(Lance o1, Lance o2) {
 				if(o1.getValor() < o2.getValor()) return 1;
-				if(o1.getValor() < o2.getValor()) return -1;
+				if(o1.getValor() > o2.getValor()) return -1;
 				return 0;
 			}
 		});
